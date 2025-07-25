@@ -1,0 +1,100 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border: 1px solid black;
+}
+.container {
+  width: 100%;
+  height: 93vh;
+  border: 2px solid red;
+  padding: 1px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flex_item {
+  border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+  border-radius: 10px;
+}
+.section_ajouter,
+.section_rechercher {
+  flex-basis: 38%;
+  height: 45%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.titre_section_ajouter {
+  text-align: center;
+}
+.section_rechercher {
+  flex-basis: 60%;
+  height: 45%;
+  
+}
+.section_filtrer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 100%;
+  height: 10%;
+}
+.section_lister {
+  flex-basis: 100%;
+  height: 40%;
+}
+#formulaire_ajout > *,
+#formulaire_recherche > * {
+  margin: 5px;
+}
+.flex_bouton {
+  height: 30%;
+  flex-basis: 15%;
+}
+.button_ajouter_style {
+  height: 25%;
+}
+.button_rechercher_style {
+  height: 60%;
+}
+.image_card {
+  margin: 20px;
+}
+.book-card {
+  width: 200px; /* Largeur fixe au lieu de 20% */
+  min-height: 120px; /* Hauteur minimum */
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background-color: white;
+  flex-shrink: 0; /* Empêche la compression */
+}
+
+.book-card > p {
+  text-decoration: underline;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.book-card > span {
+  display: block;
+  margin-bottom: 8px;
+}
+#card_container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  overflow-x: auto; /* Scroll horizontal si besoin */
+  max-width: 100%; /* Force à rester dans le parent */
+}

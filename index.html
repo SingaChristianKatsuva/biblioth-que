@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>Bibliotheque</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <h1>Ma bibliothèque</h1>
+    </header>
+    <div class="container">
+      <div class="flex_item section_ajouter">
+        <h3>Ajouter un manuel</h3>
+        <form action="" id="formulaire_ajout">
+          <label for="titre">Titre : </label>
+          <input type="text" name="titre" id="titre" /><br />
+          <label for="auteur">Auteur :</label>
+          <input type="text" name="auteur" id="auteur" /><br />
+          <label for="annee">Année de parution :</label>
+          <input type="number" name="annee" id="annee" /><br />
+          <label for="statut">Statut : </label>
+          <select id="select_statut">
+            <option value=""></option>
+            <option value="disponible">disponible</option>
+            <option value="indisponible">indisponible</option>
+            <option value="inconnu">inconnu</option></select
+          ><br />
+          <input
+            type="submit"
+            name="ajouter"
+            value="Ajouter le livre"
+            class="button_ajouter_style"
+          />
+        </form>
+      </div>
+      <div class="flex_item section_rechercher">
+        <h3 class="titre_section_ajouter">recherche API</h3>
+        <form action="" id="formulaire_recherche">
+          <label for="titre">Titre à recherché : </label>
+          <input type="text" name="titre_cherche" id="titre_cherche" /><br />
+          <input
+            type="submit"
+            value="Recherché"
+            class="button_rechercher_style"
+            id="btn_rechercher"
+          />
+        </form>
+        <div class="image_card">
+          <img
+            src=""
+            alt="here will be an image eventually..."
+            id="image_livre_trouvé"
+          />
+        </div>
+
+        <template id="book-template">
+          <div class="book-card">
+            <p>Titre :</p> <span id="span_titre"></span>
+            <p>Auteur :</p><span id="span_auteur"></span>
+            <p>Année :</p><span id="span_annee"></span>
+            <p>Disponibilité :</p><span id="span_dispo"></span>
+          </div>
+        </template>
+
+        <div id="card_container" ></div>
+      </div>
+      <div class="flex_item section_filtrer">
+        <h3>Filtre :</h3>
+        <button class="flex_bouton" id="btn_tous">Tous</button>
+        <button class="flex_bouton" id="btn_lu">Lu</button>
+        <button class="flex_bouton" id="btn_enCours">En cours</button>
+        <button class="flex_bouton" id="btn_nonLu">Non lu</button>
+      </div>
+      <div class="flex_item section_lister">Listes des Livres</div>
+    </div>
+    <footer></footer>
+  </body>
   <script src="index.js"></script>
 </html>
